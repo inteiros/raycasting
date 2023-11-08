@@ -1,0 +1,5 @@
+/lib
+/.vscode
+a.exe
+raylib.h
+test.cpp
