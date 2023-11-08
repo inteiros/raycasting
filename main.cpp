@@ -5,8 +5,8 @@ const int screenWidth = 1280;
 const int screenHeight = 960;
 const int mapWidth = 20;
 const int mapHeight = 20;
-const float moveSpeed = 0.02;
-const float rotationSpeed = 0.02;
+const float moveSpeed = 0.01;
+const float rotationSpeed = 0.01;
 
 int worldMap[mapWidth][mapHeight] = {
     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
@@ -109,7 +109,7 @@ private:
 
     void drawMap() {
         Color floorColor = { 105, 85, 50, 255 };
-        DrawRectangle(0, 0, screenWidth, screenHeight, floorColor);
+        DrawRectangle(0, 0, screenWidth, screenHeight, BLACK);
 
         for (int x = 0; x < screenWidth; x++) {
             float cameraX = 2 * x / (float)screenWidth - 1;
@@ -182,7 +182,8 @@ private:
                 drawEnd = screenHeight - 1;
             }
 
-            Color wallColor = { 100, 100, 50, 255 };
+            //Color wallColor = { 100, 100, 50, 255 };
+            Color wallColor = { 0, 50, 105, 255 };
 
             if (isColliding(playerX, playerY)) {
                 playerX = std::round(playerX);

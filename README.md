@@ -11,4 +11,4 @@ To build this project on windows, first download and build raylib, then get rayl
 
 and it will generate a file named a.exe to run the project
 
-![print](raycasting.png)
+![demo](raycasting.gif "demo")
